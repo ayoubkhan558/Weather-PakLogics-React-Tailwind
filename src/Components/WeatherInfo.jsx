@@ -4,13 +4,25 @@ import LocationInfo from "@components/LocationInfo";
 import WeatherDetails from "@components/WeatherDetails";
 
 
-function WeatherInfo({ weather, geo }) {
+function WeatherInfo({ weather, geo, loading }) {
+  if (loading) {
+    return <>
+      <div className="bg-blue-400/30 backdrop-blur rounded-lg overflow-hidden shadow-lg justify-center mt-16 lg:mt-64 min-h-72 lg:min-h-80 xl:min-h-96">
+        <div className="p-4 lg:px-5 xl:px-7 2xl:p-8">
+          <p className="text-white text-xl">
+            Loading Weather Info
+          </p>
+        </div>
+      </div>
+    </>;
+  }
+
   // Check if weather and geo data are available
   if (!weather || !geo) {
     return <>
       <div className="bg-blue-400/30 backdrop-blur rounded-lg overflow-hidden shadow-lg justify-center mt-16 lg:mt-64 min-h-72 lg:min-h-80 xl:min-h-96">
         <div className="p-4 lg:px-5 xl:px-7 2xl:p-8">
-          <p className="text-red-600">
+          <p className="text-red-600 text-xl">
             Error: Weather or location data not available.
           </p>
         </div>

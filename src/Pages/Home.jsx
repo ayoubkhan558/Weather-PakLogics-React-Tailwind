@@ -54,6 +54,7 @@ function Home() {
         // console.log(response?.status);
       })
       .catch(error => {
+        setWeather();
         const errorMsg = error?.response?.data?.message ? error?.response?.data?.message : "Something went wrong!";
         // Display error notification
         notyf.error(errorMsg);
@@ -73,6 +74,7 @@ function Home() {
         console.log(response?.data);
       })
       .catch(error => {
+        setWeather();
         const errorMsg = error?.response?.data?.message ? error?.response?.data?.message : "Something went wrong!";
         // Display error notification
         notyf.error(errorMsg);
@@ -126,7 +128,11 @@ function Home() {
         </form>
       </div>
 
-      <WeatherInfo weather={weather} geo={geo} />
+      <WeatherInfo
+        weather={weather}
+        geo={geo}
+        loading={loadingData}
+      />
 
     </div>
   );
