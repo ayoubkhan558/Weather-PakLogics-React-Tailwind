@@ -18,9 +18,10 @@ npm start
 
 And then open http://localhost:3000 to view it in the browser.
 
-#### Available Scripts
+# Preview
+![weather-paklogics](https://github.com/ayoubkhan558/Weather-PakLogics-React-Tailwind/assets/99708427/33662f1f-075a-4ec3-a6ba-9811787bc14f)
 
-In this project, you can run the following scripts:
+
 
 | Script        | Description                                         |
 | ------------- | --------------------------------------------------- |
