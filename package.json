@@ -1,5 +1,5 @@
 {
-  "name": "weather-app",
+  "name": "weatlr-app",
   "version": "1.0.0",
   "scripts": {
     "start": "vite --port 3200 --open",
